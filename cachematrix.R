@@ -5,6 +5,7 @@
 
 makeCacheMatrix <- function(x = matrix()) {
 
+    message("TODO: write the makeCacheMatrix function")
 }
 
 
@@ -12,4 +13,6 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
+  
+  message("TODO: write the cacheSolve function")
 }
