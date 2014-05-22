@@ -10,6 +10,8 @@ Things to do on this assignment
 
 # Make code changes
 ## Modify the makeCacheMatrix function
-* TODO
+* TODO 1
+* TODO 2
+
 ## Modify the cacheSolve function
 * TODO
