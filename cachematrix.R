@@ -12,14 +12,18 @@
 ## The inverse is
 ## 
 ## -2   3
-## 3  -4
+##  3  -4
 ## 
 ## Source: http://www.mathwords.com/i/inverse_of_a_matrix.htm
 
+## ASSUMPTION: the matrix suppiled is always invertible.
 
-## makeCacheMatrix() - takes a matrix as input and creates a list containing four
+## makeCacheMatrix() - creates a special "matrix" object that can cache its inverse.
+## Takes a matrix as input and creates a list containing four
 ##    functions: set(), get(), setinverse() and getinverse()
 ## This object enables the caching of the solve() function on a given matrix x
+## Attribution: this function is modeled after the makeVector() function provided in the 
+##   assignment.
 
 makeCacheMatrix <- function(x = matrix()) {
 
@@ -41,6 +45,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ## by the call to makeCacheMatrix()
 ## If the inverse of x was previously computed then a cached copy of the inverse is
 ## returned.
+## Attribution: this function is modeled after the cachemean() function provided in the 
+##   assignment.
 
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
