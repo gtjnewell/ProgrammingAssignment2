@@ -10,8 +10,10 @@ Things to do on this assignment
 
 # Make code changes
 ## Modify the makeCacheMatrix function
-* TODO 1
-* TODO 2
+* DONE
 
 ## Modify the cacheSolve function
-* TODO
+* DONE
+
+## Write up test cases (not required for the assignment, but good practice)
+* DONE
