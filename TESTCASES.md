@@ -71,7 +71,7 @@ Source: [www.mathwords.com][id]
 
 ### 2.B Second computation of matrix matCO
 
-* Compute the inverse of matCO using the cacheSolve() function. This should return the cached copy. This is evidenced by the output of the message "getting cached inverse matrix"
+* Compute the inverse of matCO a second time using the cacheSolve() function. This should return the cached copy. This is evidenced by the output of the message "getting cached inverse matrix"
 
     `> matCOinv <- cacheSolve(matCO)`
 
@@ -79,7 +79,7 @@ Source: [www.mathwords.com][id]
 
     `getting cached inverse matrix`
     
-* Inspect the object using matCOinv$getinverse()
+* Inspect the object matCOinv
 
     `> matCOinv`
 
@@ -89,6 +89,6 @@ Source: [www.mathwords.com][id]
     [1,]   -2    3
     [2,]    3   -4
 
-* This can also be inspected using the getinverse() function
+* This can also be inspected using the getinverse() function of the matCO object
 
     `> matCO$getinverse()`
