@@ -1,7 +1,25 @@
-## Put comments here that give an overall description of what your
-## functions do
+## The two functions created for this assignment should:
+##
+## 1. Create the cacheMatrix object
+## 2. Compute and return the inverse of the matrix object, returning a cached copy 
+##    if the inverse has already been computed.
+##
+## For the 2 x 2 matrix
+## 
+## 4   3
+## 3   2
+## 
+## The inverse is
+## 
+## -2   3
+## 3  -4
+## 
+## Source: http://www.mathwords.com/i/inverse_of_a_matrix.htm
 
-## Write a short comment describing this function
+
+## makeCacheMatrix() - takes a matrix as input and creates a list containing four
+##    functions: set(), get(), setinverse() and getinverse()
+## This object enables the caching of the solve() function on a given matrix x
 
 makeCacheMatrix <- function(x = matrix()) {
 
@@ -19,10 +37,13 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## cacheSolve returns the inverse
+## cacheSolve() returns the inverse of the input matrix x using the object created
+## by the call to makeCacheMatrix()
+## If the inverse of x was previously computed then a cached copy of the inverse is
+## returned.
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+    ## Return a matrix that is the inverse of 'x'
     
     i <- x$getinverse()
     
@@ -33,11 +54,12 @@ cacheSolve <- function(x, ...) {
       return(i)
     }
     
+    ## the inverse needs to be computed
     ## retrieve the matrix created by the call to makeCacheMatrix()
-    data <- x$get()
+    mat <- x$get()
     
     ## compute the inverse using the solve() function
-    i <- solve(data, ...)
+    i <- solve(mat, ...)
     
     ## add the computed inverse matrix to the cache
     x$setinverse(i)
